@@ -1,0 +1,265 @@
+{
+    "name": "Example Color Scheme",
+    "variables":
+    
+    {
+        "red-1": "hsl(0, 30%, 50%)",
+        "red-2": "hsl(0, 30%, 50%)",
+
+        "green-1": "hsl(80, 30%, 50%)",
+        "green-2": "hsl(70, 30%, 70%)",
+
+        "blue-1": "hsl(250, 20%, 60%)",
+
+        "earth-1": "hsl(30, 30%, 60%)",
+
+        "gray-1": "hsl(0, 9%, 45%)",
+        "gray-2": "hsl(40, 19%, 70%)",
+        "gray-comment": "hsl(40, 5%, 70%)",
+    },
+
+    "globals":
+
+    {
+        "background": "hsl(20, 15%, 15%)",
+        "foreground": "hsl(2, 20%, 70%)",
+
+        "caret": "var(green-2)",
+
+        "gutter": "hsl(20, 20%, 20%)",
+        "gutter_foreground": "hsl(20, 20%, 40%)",
+        "gutter_foreground_highlight": "hsl(20, 20%, 40%)",
+
+        "selection": "hsl(200, 80%, 20%)",
+        "selection_corner_radius": "5",
+    },
+
+    "rules":
+
+    [
+        // JSON
+
+        {
+            "name": "JSON comment 1",
+            "scope": "source.json meta.mapping.value.json meta.sequence.json comment.line.double-slash.js",
+            "foreground": "var(gray-comment)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON comment 2",
+            "scope": "source.json meta.mapping.value.json meta.mapping.json comment.line.double-slash.js punctuation.definition.comment.json",
+            "foreground": "var(gray-comment)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON comment 3",
+            "scope": "source.json meta.mapping.value.json meta.mapping.json comment.line.double-slash.js",
+            "foreground": "var(gray-comment)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON number 1",
+            "scope": "source.json meta.mapping.value.json meta.mapping.value.json meta.mapping.value.json meta.number.float.decimal.json constant.numeric.value.json",
+            "foreground": "var(blue-1)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON number 2",
+            "scope": "source.json meta.mapping.value.json meta.sequence.json meta.mapping.value.json meta.number.integer.decimal.json constant.numeric.value.json",
+            "foreground": "var(blue-1)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON number 3",
+            "scope": "source.json meta.mapping.value.json meta.sequence.json meta.mapping.value.json meta.number.float.decimal.json constant.numeric.value.json",
+            "foreground": "var(blue-1)",
+            "font-style": "italic"
+        },
+        {
+            "name": "JSON mapping key",
+            "scope": "source.json meta.mapping.key.json string.quoted.double.json",
+            "foreground": "var(gray-2)",
+        },
+        {
+            "name": "JSON mapping value",
+            "scope": "source.json meta.mapping.value.json meta.mapping.value.json string.quoted.double.json",
+            "foreground": "hsl(30, 40%, 70%)",
+        },
+        {
+            "name": "JSON colon",
+            "scope": "source.json meta.mapping.value.json meta.mapping.json punctuation.separator.key-value.json",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "JSON curly bracket 1",
+            "scope": "source.json meta.mapping.value.json meta.mapping.value.json meta.mapping.json punctuation.section.mapping",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "JSON curly bracket 2",
+            "scope": "source.json meta.mapping.value.json meta.mapping.json punctuation.section.mapping",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "JSON bracket 1",
+            "scope": "source.json meta.mapping.value.json meta.sequence.json meta.mapping.value.json meta.sequence.json punctuation.section.sequence",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "JSON bracket 2",
+            "scope": "source.json meta.mapping.value.json meta.sequence.json punctuation.section.sequence",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "JSON bracket 2",
+            "scope": "source.json meta.mapping.json punctuation.section.mapping",
+            "foreground": "var(red-1)",
+        },        
+        
+        // python
+
+        {
+            "name": "python import statement",
+            "scope": "source.python meta.statement.import.python keyword.control.import.python",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python import statement as",
+            "scope": "source.python meta.statement.import.python keyword.control.import.as.python",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python import target 1",
+            "scope": "source.python meta.statement.import.python meta.path.python meta.generic-name.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python import statement 2",
+            "scope": "source.python meta.statement.import.python meta.generic-name.python",
+            "foreground": "var(blue-1)",
+        }, 
+        {
+            "name": "python class declaration",
+            "scope": "source.python meta.class.python keyword.declaration.class.python",
+            "foreground": "var(red-1)",
+        }, 
+        {
+            "name": "python class entity name",
+            "scope": "source.python meta.class.python entity.name.class.python",
+            "foreground": "var(green-1)",
+        },
+        {
+            "name": "python class inheritance perentheses",
+            "scope": "source.python meta.class.inheritance.python punctuation.section.inheritance",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python class inherited entity",
+            "scope": "source.python meta.class.inheritance.python entity.other.inherited-class.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python class section begin",
+            "scope": "source.python meta.class.python punctuation.section.class.begin.python",
+            "foreground": "var(gray-1)",
+        },
+        {
+            "name": "python function declaration",
+            "scope": "source.python meta.function.python keyword.declaration.function.python",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python function entity name 1",
+            "scope": "source.python meta.function.python entity.name.function.python support.function.magic.python",
+            "foreground": "var(green-1)",
+        },
+        {
+            "name": "python function entity name 2",
+            "scope": "source.python meta.function.python entity.name.function.python",
+            "foreground": "var(green-1)",
+        },
+        {
+            "name": "python function parentheses",
+            "scope": "source.python meta.function.parameters.python punctuation.section.parameters",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python function parameters",
+            "scope": "source.python meta.function.parameters.python variable.parameter.python",
+            "foreground": "var(gray-2)",
+        },
+        {
+            "name": "python something idk",
+            "scope": "source.python meta.path.python variable.language.python",
+            "foreground": "var(gray-2)",
+        },
+        {
+            "name": "python something also",
+            "scope": "source.python meta.path.python meta.generic-name.python",
+            "foreground": "var(gray-1)",
+        },
+        {
+            "name": "python number 1",
+            "scope": "source.python keyword.operator.arithmetic.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python number 2",
+            "scope": "source.python meta.number.integer.decimal.python constant.numeric.value.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python number 3",
+            "scope": "source.python meta.function-call.arguments.python meta.mapping.value.python meta.sequence.tuple.python meta.number.float.decimal.python constant.numeric.value.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python operator",
+            "scope": "source.python keyword.operator.assignment.python",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python comment 1",
+            "scope": "source.python comment.line.number-sign.python punctuation.definition.comment.python",
+            "foreground": "var(gray-1)",
+        },
+        {
+            "name": "python comment 2",
+            "scope": "source.python comment.line.number-sign.python",
+            "foreground": "var(gray-1)",
+        },
+        {
+            "name": "python variable call",
+            "scope": "source.python meta.path.python meta.generic-name.python",
+            "foreground": "var(earth-1)",
+        },
+        {
+            "name": "python variable function",
+            "scope": "source.python meta.function-call.identifier.python meta.path.python variable.function.python",
+            "foreground": "var(blue-1)",
+        },
+        {
+            "name": "python variable function",
+            "scope": "source.python meta.function-call.arguments.python meta.mapping.python punctuation.section.mapping",
+            "foreground": "var(red-1)",
+        },
+        {
+            "name": "python function parentheses",
+            "scope": "source.python meta.function-call.arguments.python punctuation.section.arguments",
+            "foreground": "var(red-1)",
+        },
+
+        // YAML
+
+        {
+            "name": "YAML mapping key",
+            "scope": "source.yaml meta.mapping.key.yaml meta.string.yaml string.unquoted.plain.out.yaml",
+            "foreground": "hsl(360, 30%, 50%)",
+        },
+        {
+            "name": "YAML mapping value",
+            "scope": "source.yaml constant.language.boolean.yaml",
+            "foreground": "hsl(30, 40%, 70%)",
+        },
+    ]
+}
